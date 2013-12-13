@@ -130,7 +130,7 @@ Response:
 
 ```js
 {
-  "msg": "Deleted."
+  "msg": "Stored."
 }
 ```
 
