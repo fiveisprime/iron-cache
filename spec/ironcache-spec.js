@@ -70,26 +70,28 @@ describe('key API calls', function() {
       token.should.equal('1213');
       method.should.equal('PUT');
 
-      data.should.have.property('test');
+      data.should.have.property('value');
 
       done();
     });
 
-    ic.put('put-cache', 'key-name', { test: true });
+    ic.put('put-cache', 'key-name', { value: 'test' });
   });
 
   it('should call `incr` with the correct parameters', function(done) {
-    var ic = ironcache('incr', '1415', function(uri, token, method) {
+    var ic = ironcache('incr', '1415', function(uri, token, method, data) {
       uri.should.equal('/projects/incr/caches/incr-cache/items/key-name/increment');
       token.should.equal('1415');
       method.should.equal('POST');
 
+      data.should.have.property('amount');
+
       done();
     });
 
-    ic.incr('incr-cache', 'key-name');
+    ic.incr('incr-cache', 'key-name', 1);
   });
-  
+
   it('should call `get` with the correct parameters', function(done) {
     var ic = ironcache('get', '1617', function(uri, token, method) {
       uri.should.equal('/projects/get/caches/get-cache/items/key-name');
@@ -101,7 +103,7 @@ describe('key API calls', function() {
 
     ic.get('get-cache', 'key-name');
   });
-  
+
   it('should call `del` with the correct parameters', function(done) {
     var ic = ironcache('del', '1819', function(uri, token, method) {
       uri.should.equal('/projects/del/caches/del-cache/items/key-name');
