@@ -1,6 +1,6 @@
 {
   "name": "ironcache",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Node.js implementation of Iron Cache.",
   "main": "index.js",
   "scripts": {
