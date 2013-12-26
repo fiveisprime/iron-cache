@@ -7,7 +7,7 @@ describe('ironcache', function() {
 
     it('should throw if missing configuration options', function() {
       (function() {
-        lib();
+        lib.createClient();
       }).should.throw();
     });
 

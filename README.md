@@ -10,10 +10,9 @@ Node.js implementation of [Iron Cache](http://www.iron.io/cache).
 Initialize using your project ID and OAuth token.
 
 ```js
-var ironcache = require('ironcache')(
-  '52a9e663601db21209124054'
-, 'zsZBKJ7QYSldnRbRKOgDTFf3Gxw'
-);
+var ironcache = require('ironcache')
+
+var client = ironcache.createClient('project-id', 'auth-token');
 ```
 
 The API usage is split into two pieces: cache management and key management.
