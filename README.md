@@ -10,8 +10,7 @@ Node.js implementation of [Iron Cache](http://www.iron.io/cache).
 Initialize using your project ID and OAuth token.
 
 ```js
-var ironcache = require('ironcache')
-
+var ironcache = require('ironcache');
 var client = ironcache.createClient('project-id', 'auth-token');
 ```
 
@@ -26,7 +25,7 @@ Get information about the caches in the project, clear them and delete them.
 Empty or nonexistent caches will return an empty array.
 
 ```js
-ironcache.list(function(err, res) {
+client.list(function(err, res) {
   if (err) throw err;
   console.log(res);
 });
@@ -52,7 +51,7 @@ Response:
 Get information about a cache.
 
 ```js
-ironcache.info('my-cache', function(err, res) {
+client.info('my-cache', function(err, res) {
   if (err) throw err;
   console.log(res);
 });
@@ -71,7 +70,7 @@ Response:
 Clear all items in a cache.
 
 ```js
-ironcache.clearCache('my-cache', function(err, res) {
+client.clearCache('my-cache', function(err, res) {
   if (err) throw err;
   console.log(res);
 });
@@ -90,7 +89,7 @@ Response:
 Delete a cache and all items in it.
 
 ```js
-ironcache.delCache('my-cache', function(err, res) {
+client.delCache('my-cache', function(err, res) {
   if (err) throw err;
   console.log(res);
 });
@@ -113,7 +112,7 @@ Add, update, and remove items in a cache.
 Puts an item into a cache.
 
 ```js
-ironcache.put('my-cache', 'key', { value: 'some data' }, function(err, res) {
+client.put('my-cache', 'key', { value: 'some data' }, function(err, res) {
   if (err) throw err;
   console.log(res);
 });
@@ -143,7 +142,7 @@ to decrement the value. The increment is atomic, so concurrent increments will
 all be observed.
 
 ```js
-ironcache.incr('my-cache', 'key', 1, function(err, res) {
+client.incr('my-cache', 'key', 1, function(err, res) {
   if (err) throw err;
   console.log(res);
 });
@@ -163,7 +162,7 @@ Response:
 Retrieve an item from the cache.
 
 ```js
-ironcache.get('my-cache', 'key', function(err, res) {
+client.get('my-cache', 'key', function(err, res) {
   if (err) throw err;
   console.log(res);
 });
@@ -185,7 +184,7 @@ Response:
 Delete an item from the cache.
 
 ```js
-ironcache.del('my-cache', 'key', function(err, res) {
+client.del('my-cache', 'key', function(err, res) {
   if (err) throw err;
   console.log(res);
 });
