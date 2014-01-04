@@ -1,8 +1,6 @@
 var http = require('../lib/http')
   , nock = require('nock');
 
-require('should');
-
 describe('http', function() {
 
   it('should correctly format url', function(done) {

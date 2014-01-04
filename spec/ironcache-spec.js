@@ -1,8 +1,6 @@
 var lib       = require('../')
   , ironcache = require('../lib/ironcache');
 
-require('should');
-
 describe('ironcache', function() {
 
   describe('initialization', function() {
