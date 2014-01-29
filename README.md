@@ -1,5 +1,5 @@
-ironcache [![Build Status](https://travis-ci.org/fiveisprime/ironcache.png?branch=master)](https://travis-ci.org/fiveisprime/ironcache)
-=========
+Iron-Cache [![Build Status](https://travis-ci.org/fiveisprime/iron-cache.png?branch=master)](https://travis-ci.org/fiveisprime/iron-cache)
+==========
 
 Node.js implementation of [Iron Cache](http://www.iron.io/cache).
 
