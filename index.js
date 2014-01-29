@@ -1,3 +1,9 @@
+//
+//     Iron-Cache
+//     Copyright(c) 2014 Matt Hernandez <matt@modulus.io>
+//     MIT Licensed
+//
+
 var http = require('./lib/http');
 
 exports.createClient = function(project, token) {
