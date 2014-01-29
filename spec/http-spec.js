@@ -1,7 +1,7 @@
 var http = require('../lib/http')
   , nock = require('nock');
 
-describe('http', function() {
+describe('http wrapper', function() {
 
   it('should correctly format url', function(done) {
 
