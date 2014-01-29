@@ -3,14 +3,14 @@ ironcache [![Build Status](https://travis-ci.org/fiveisprime/ironcache.png?branc
 
 Node.js implementation of [Iron Cache](http://www.iron.io/cache).
 
-[![NPM](https://nodei.co/npm/ironcache.png)](https://nodei.co/npm/ironcache/)
+[![NPM](https://nodei.co/npm/iron-cache.png)](https://nodei.co/npm/iron-cache/)
 
 # Usage
 
 Initialize using your project ID and OAuth token.
 
 ```js
-var ironcache = require('ironcache');
+var ironcache = require('iron-cache');
 var client = ironcache.createClient('project-id', 'auth-token');
 ```
 
