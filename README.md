@@ -7,18 +7,24 @@ Node.js implementation of Iron's [IronCache](http://www.iron.io/cache) product.
 
 # Usage
 
-Initialize using your project ID and OAuth token.
+Create an [iron](http//www.iron.io) project. In your dashboard, click the
+credentials link (the little key) to see your Project ID and Token. These are
+required to use the IronCache API with this module.
+
+Initialize the module using your Project ID and Token.
 
 ```js
 var ironcache = require('iron-cache');
-var client = ironcache.createClient('project-id', 'auth-token');
+var client = ironcache.createClient({ project: 'project', token: 'token' });
 ```
 
-The API usage is split into two pieces: cache management and key management.
+The API usage is split into two pieces: (cache management)[#cache-management]
+and (key management)[#key-management].
 
 ## Cache Management
 
-Get information about the caches in the project, clear them and delete them.
+These methods are used to manage your caches. Create a new cache by
+[put](#put)ting a cache key/value pair to the cache.
 
 ### List Caches
 
@@ -105,7 +111,7 @@ Response:
 
 ## Key Management
 
-Add, update, and remove items in a cache.
+CRUD the values stored in your caches.
 
 ### Put
 

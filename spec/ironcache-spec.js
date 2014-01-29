@@ -11,12 +11,18 @@ describe('initialization', function() {
 
   it('should throw if missing token', function() {
     (function() {
-      lib.createClient('project');
+      lib.createClient({ project: 'project' });
+    }).should.throw();
+  });
+
+  it('should throw if missing project', function() {
+    (function() {
+      lib.createClient({ token: 'token' });
     }).should.throw();
   });
 
   it('should initialize correctly with all parameters', function() {
-    var testClient = lib.createClient('test-project', 'test-token');
+    var testClient = lib.createClient({ project: 'test-project', token: 'test-token' });
     testClient.should.exist;
   });
 
