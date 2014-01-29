@@ -1,7 +1,7 @@
 Iron-Cache [![Build Status](https://travis-ci.org/fiveisprime/iron-cache.png?branch=master)](https://travis-ci.org/fiveisprime/iron-cache)
 ==========
 
-Node.js implementation of [Iron Cache](http://www.iron.io/cache).
+Node.js implementation of Iron's [IronCache](http://www.iron.io/cache) product.
 
 [![NPM](https://nodei.co/npm/iron-cache.png)](https://nodei.co/npm/iron-cache/)
 
