@@ -7,9 +7,23 @@
 var http = require('./lib/http');
 
 exports.createClient = function(options) {
-  if (!options) throw new Error('You must specify configuration options');
-  if (!options.project) throw new Error('You must specify a project.');
-  if (!options.token) throw new Error('You must specify a token.');
+  options = options || {};
+
+  if (process.env.IRON_CACHE_PROJECT) {
+    options.project = process.env.IRON_CACHE_PROJECT;
+  }
+
+  if (process.env.IRON_CACHE_TOKEN) {
+    options.token = process.env.IRON_CACHE_TOKEN;
+  }
+
+  if (!options.project) {
+    throw new Error('You must specify a project.');
+  }
+
+  if (!options.token) {
+    throw new Error('You must specify a token.');
+  }
 
   return require('./lib/ironcache')(options.project, options.token, http);
 };
