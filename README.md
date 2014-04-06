@@ -1,9 +1,7 @@
-Iron-Cache [![Build Status](https://travis-ci.org/fiveisprime/iron-cache.svg?branch=master)](https://travis-ci.org/fiveisprime/iron-cache)
+Iron-Cache [![NPM version](https://badge.fury.io/js/iron-cache.svg)](http://badge.fury.io/js/iron-cache) [![Build Status](https://travis-ci.org/fiveisprime/iron-cache.svg?branch=master)](https://travis-ci.org/fiveisprime/iron-cache)
 ==========
 
 Node.js implementation of Iron's [IronCache](http://www.iron.io/cache) product.
-
-[![NPM](https://nodei.co/npm/iron-cache.png)](https://nodei.co/npm/iron-cache/)
 
 # Usage
 
@@ -13,9 +11,20 @@ required to use the IronCache API with this module.
 
 Initialize the module using your Project ID and Token.
 
+You can also add environment variables to your application to initialize the
+module. These variables are `IRON_CACHE_PROJECT` and `IRON_CACHE_TOKEN`. When
+using the environment variables, there is no need to pass the options object
+when creating the client object.
+
 ```js
 var ironcache = require('iron-cache');
+
+// Pass an options object.
 var client = ironcache.createClient({ project: 'project', token: 'token' });
+
+// When using the environment variables IRON_CACHE_PROJECT & IRON_CACHE_TOKEN.
+// This will throw an error if the environment variables are not set.
+var client = ironcache.createClient();
 ```
 
 The API usage is split into two pieces: (cache management)[#cache-management]
