@@ -27,8 +27,8 @@ var client = ironcache.createClient({ project: 'project', token: 'token' });
 var client = ironcache.createClient();
 ```
 
-The API usage is split into two pieces: (cache management)[#cache-management]
-and (key management)[#key-management].
+The API usage is split into two pieces: [cache management](#cache-management)
+and [key management](#key-management).
 
 ## Cache Management
 
