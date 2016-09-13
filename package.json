@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/fiveisprime/iron-cache",
   "dependencies": {
-    "request": "~2.29.0"
+    "request": "^2.74.0"
   },
   "devDependencies": {
     "jshint": "~2.3.0",
